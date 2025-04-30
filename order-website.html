@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hooked on Handmade</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff7f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffb6b9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .product-card {
+      background-color: #ffe3e0;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 5px 0;
+    }
+    .product-card .size {
+      font-size: 14px;
+      color: #ff4d4d;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], input[type="number"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 4px;
+      width: 100%;
+    }
+    .product-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .product-entry input {
+      width: 60px;
+    }
+    .total-price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ffb6b9;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #f88e94;
+    }
+  </style>
+</head>
+<body>
+  <header>Hooked on Handmade</header>
+
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>Tote Bag</h3>
+        <img src=https://i.etsystatic.com/54400755/r/il/e2de2a/6226583190/il_570xN.6226583190_cr1u.jpg>
+        <div class="size">Sizes: Small, Medium, Large</div>
+        <p>5–15 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Small Plushie</h3>
+        <img src=https://m.media-amazon.com/images/I/61TKjmF3uPL.jpg>
+        <div class="size">Size: 10-20 cm</div>
+        <p>5-15 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Medium Plushie</h3>
+        <img src=https://mochimart.co.uk/cdn/shop/products/canvas123.png?v=1630489408>
+        <div class="size">Size: 30-40 cm</div>
+        <p>20-30 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Big Plushie</h3>
+        <img src=https://m.media-amazon.com/images/I/51-HlOsfYFL.jpg>
+        <div class="size">Size: 50-70 cm</div>
+        <p>35-50 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Keychain</h3>
+        <img src=https://www.stitchbyfay.com/wp-content/uploads/2024/05/Crochet-keychain-patterns1.webp>
+        <div class="size">Size: Small</div>
+        <p>7 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Scrunchie</h3>
+        <img src=https://www.dreameecrochet.com/wp-content/uploads/2023/11/Quick-and-Easy-Crochet-Scrunchie-Free-Pattern-and-Video-Tutorial.jpg>
+        <div class="size">Size: One size</div>
+        <p>7 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Coaster</h3>
+        <img src=https://easybreezycrochet.com/wp-content/uploads/2023/04/crochet-sunflower-coasters-0012.jpg>
+        <div class="size">Size: One size</div>
+        <p>10 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Small Bag</h3>
+        <img src=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgP60exh8ijImP_Hg3CrLJSfbxPHYlcjuCf3Gp3_ChsLA5Cu5KizhLWT-IU9Ilwr3hzmI0mQTKUQAz90_89Prb3lQIczJKBFpaGBnH4N6RV5zwY_FsfEeFSO6JryuQo1W8-X958kE6l3KwaHHt1Ln54WOPDDHh1sFbMyoj64MYGY23UYQyInu8QL8B1QQ/s1500/white%20%5C%5C.png>
+        <div class="size">Size: 20cm</div>
+        <p>20 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Small Blanket</h3>
+        <img src=https://i5.walmartimages.com/asr/16c5243d-11a0-4da2-8c9a-20d40fcbef8d.798edf1dfd607fccf6a94f09c0867d5f.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF>
+        <div class="size">Size: 30-50cm </div>
+        <p>20 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Medium Blanket</h3>
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxD3wFaZxICZbac6i0VD8J04zK9Lj_8XJHMw&s>
+        <div class="size">Size: 50-70cm </div>
+        <p>40 SAR</p>
+      </div>
+      <div class="product-card">
+        <h3>Large Blanket</h3>
+        <img src=https://daisyfarmcrafts.com/wp-content/uploads/2023/04/IMG_8934-scaled.jpg>
+        <div class="size">Size: 80-100cm </div>
+        <p>55 SAR</p>
+      </div>
+    </div>
+
+    <form action="https://formspree.io/f/xwpovqeo" method="POST" onsubmit="return validateForm();">
+      <label>Your Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>Email:
+        <input type="email" name="email" required />
+      </label>
+
+      <div class="product-entry"><span>Tote Bags</span><input type="number" name="tote" value="0" min="0" onchange="calculateTotal()"> x 10</div>
+      <div class="product-entry"><span>Small Plushies</span><input type="number" name="smallPlushie" value="0" min="0" onchange="calculateTotal()"> x 10</div>
+      <div class="product-entry"><span>Medium Plushies</span><input type="number" name="mediumPlushie" value="0" min="0" onchange="calculateTotal()"> x 20</div>
+      <div class="product-entry"><span>Big Plushies</span><input type="number" name="bigPlushie" value="0" min="0" onchange="calculateTotal()"> x 35</div>
+      <div class="product-entry"><span>Keychains</span><input type="number" name="keychains" value="0" min="0" onchange="calculateTotal()"> x 7</div>
+      <div class="product-entry"><span>Scrunchies</span><input type="number" name="scrunchies" value="0" min="0" onchange="calculateTotal()"> x 7</div>
+      <div class="product-entry"><span>Coasters</span><input type="number" name="coasters" value="0" min="0" onchange="calculateTotal()"> x 10</div>
+      <div class="product-entry"><span>Small Bags</span><input type="number" name="smallBags" value="0" min="0" onchange="calculateTotal()"> x 20</div>
+      <div class="product-entry"><span>Small Blanket</span><input type="number" name="smallBlanket" value="0" min="0" onchange="calculateTotal()"> x 20</div>
+      <div class="product-entry"><span>Medium Blanket</span><input type="number" name="mediumBlanket" value="0" min="0" onchange="calculateTotal()"> x 40</div>
+      <div class="product-entry"><span>Large Blanket</span><input type="number" name="largeBlanket" value="0" min="0" onchange="calculateTotal()"> x 55</div>
+
+      <div class="total-price">Total Price: <span id="totalPrice">0 SAR</span></div>
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <script>
+    function calculateTotal() {
+      let total = 0;
+      const prices = {
+        tote: 5-15,
+        smallPlushie: 15,
+        mediumPlushie: 25,
+        bigPlushie: 45,
+        keychains: 7,
+        scrunchies: 7,
+        coasters: 10,
+        smallBags: 15,
+        smallBlanket: 25,
+        mediumBlanket: 55,
+        largeBlanket: 75
+      };
+
+      for (let key in prices) {
+        const quantity = document.querySelector(`[name="${key}"]`).value;
+        total += prices[key] * quantity;
+      }
+
+      document.getElementById("totalPrice").innerText = total + " SAR";
+    }
+
+    function validateForm() {
+      alert("Order has been submitted!");
+      return true;
+    }
+  </script>
+</body>
+</html>
